@@ -21,11 +21,7 @@ else:
     y*=-1
 
 p=hypot(x,y)
-teta1=acos(float(x/p))
-teta2=asin(float(y/p))
-
-if teta1-teta2>=0.01:
-    print("Errore: i valori di teta sono diversi")
+teta=acos(float(x/p))
 
 assex=[]
 assey=[]
@@ -33,10 +29,8 @@ ro=pow(p,float(1/n))
 theta=float(teta1/n)
 
 for k in range(0,n):
-    duekpi=float(2*k*pi/n)
-    arg_e_pi=theta+duekpi
-    tmpx=(cos(arg_e_pi))
-    tmpy=(sin(arg_e_pi))
+    tmpx=(cos(theta+float(2*k*pi/n)))
+    tmpy=(sin(theta+float(2*k*pi/n)))
     assex[k:k]=[tmpx*ro]
     assey[k:k]=[tmpy*ro]
 
