@@ -1,13 +1,7 @@
 from matplotlib import pyplot as pl
-from math import sqrt as s
-from math import pi
-from math import asin
-from math import acos
-from math import sin
-from math import cos
-from math import pow
-from math import hypot
 from math import sqrt as root2
+from math import sqrt as s
+from math import *
 
 x=int(input("Re(z): "))
 y=int(input("Im(z): "))
@@ -22,10 +16,6 @@ else:
 
 p=hypot(x,y)
 teta1=acos(float(x/p))
-teta2=asin(float(y/p))
-
-if teta1-teta2>=0.01:
-    print("Errore: i valori di teta sono diversi")
 
 assex=[]
 assey=[]
